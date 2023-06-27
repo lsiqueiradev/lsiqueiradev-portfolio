@@ -17,8 +17,8 @@ export default function About() {
       </Description>
       <Title>Work Experience</Title>
       <div className="my-16">
-        {works.map((item, index) => (
-          <WorkItem item={item} key={index} />
+        {works.map((item) => (
+          <WorkItem item={item} key={item.id} />
         ))}
       </div>
       <Title>Educations</Title>

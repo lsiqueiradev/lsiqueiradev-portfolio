@@ -1,34 +1,32 @@
 import Image from 'next/image'
 
-export interface ProjectItemProps {
+interface ProjectItemProps {
+  link: string,
   title: string
   description: string
-  src: string
+  image_url: string
   stacks: string
   preview: string
   githubUrl: string
 }
 
-export function ProjectItem({
-  title,
-  src,
-  description,
-  stacks,
-  preview,
-  githubUrl,
-}: ProjectItemProps) {
+interface Props {
+  data: ProjectItemProps
+}
+
+export function ProjectItem({ data }: Props) {
   return (
     <div>
       <div>
-        <Image src={src} alt="" />
+        <Image src={data.image_url} alt="" />
       </div>
       <div>
-        <h6>{title} </h6>
-        <p>{description}</p>
-        <p>Tech stack : {stacks}</p>
+        <h6>{data.title} </h6>
+        <p>{data.description}</p>
+        <p>Tech stack : {data.stacks}</p>
         <div>
-          <a href={preview}>Live Preview</a>
-          <a href={githubUrl}>View Code</a>
+          <a href={data.preview}>Live Preview</a>
+          <a href={data.githubUrl}>View Code</a>
         </div>
       </div>
     </div>
