@@ -16,7 +16,7 @@ export function NavItem({
     <Link
       href={href}
       {...restLinkProps}
-      className={`text-md text-gray-300 hover:text-violet-600 
+      className={`text-xl md:text-base text-gray-300 hover:text-violet-600 
       ${isActive && 'text-violet-600'}`}
     >
       {text}

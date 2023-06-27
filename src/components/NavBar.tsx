@@ -19,7 +19,7 @@ export function NavBar() {
   const [activeIdx, setActiveIdx] = useState<number>(-1);
 
   return (
-    <header className="flex items-center justify-between h-24">
+    <header className="flex items-center justify-between h-24 lg:relative sticky top-0 bg-gray-950">
       <Link
         href='/'
       >
@@ -35,8 +35,8 @@ export function NavBar() {
         </div>
       </button>
       {/* fixed top-0 right-0 bottom-0 w-full h-screen bg-gray-900 p-10 z-50 mt-24 lg:relative lg:bg-inherit  */}
-      <div className={` ${isNavActive ? 'top-24' : '-top-full'} flex lg:items-center lg:justify-end lg:relative lg:bg-inherit lg:top-auto lg:flex-row lg:p-0 p-4 flex-col items-end fixed right-0 left-0 bottom-0 w-full h-full z-40 bg-gray-900 transition-all duration-500`}>
-        <nav className="flex lg:gap-12 lg:items-center lg:flex-row flex-col items-end gap-6">
+      <div className={` ${isNavActive ? 'right-0' : '-right-full'} flex lg:items-center lg:justify-end lg:relative lg:bg-inherit lg:top-auto lg:flex-row lg:p-0 p-4 pt-20 lg:pt-4 flex-col items-center fixed lg:right-auto top-24 bottom-0 w-full h-full z-40 bg-gray-900 transition-all duration-700`}>
+        <nav className="flex lg:gap-12 lg:items-center lg:flex-row flex-col text-center gap-10">
           {MENU_LIST.map((menu, index) => (
             <NavItem
               key={menu.text}
@@ -49,11 +49,11 @@ export function NavBar() {
             />
           ))}
         </nav>
-        <nav className="flex lg:ml-12 gap-4 mt-6">
+        <nav className="flex lg:ml-12 gap-4 mt-10 lg:mt-0">
           <a
             href="https://github.com/lsiqueiradev"
             target="_blank"
-            className="text-2xl text-gray-300 hover:text-violet-600"
+            className="text-3xl text-gray-300 hover:text-violet-600"
             rel="noreferrer"
           >
             <IoLogoGithub />
@@ -61,7 +61,7 @@ export function NavBar() {
           <a
             href="https://www.linkedin.com/in/lsiqueiradev"
             target="_blank"
-            className="text-2xl text-gray-300 hover:text-violet-600"
+            className="text-3xl text-gray-300 hover:text-violet-600"
             rel="noreferrer"
           >
             <IoLogoLinkedin />

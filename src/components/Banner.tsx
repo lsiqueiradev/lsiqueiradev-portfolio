@@ -13,7 +13,7 @@ export function Banner() {
 
       <div className="p-2 bg-violet-600 rounded-full overflow-hidden">
         <Image
-          className="relative rounded-full"
+          className="rounded-full"
           src="/avatar.jpeg"
           alt="Avatar Lucas Siqueira"
           width={400}
