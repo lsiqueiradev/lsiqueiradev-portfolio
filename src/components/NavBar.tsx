@@ -18,6 +18,14 @@ export function NavBar() {
   const [isNavActive, setIsNavActive] = useState<boolean>(false);
   const [activeIdx, setActiveIdx] = useState<number>(-1);
 
+  useEffect(() => {
+    if (isNavActive) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [isNavActive])
+
   return (
     <header className="flex items-center justify-between h-24 lg:relative sticky top-0 bg-gray-950">
       <Link
