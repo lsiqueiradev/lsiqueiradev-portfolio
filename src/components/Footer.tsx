@@ -7,7 +7,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 export function Footer() {
   return (
-    <footer className="mt-14">
+    <footer className="mt-40">
       <div className="flex flex-col md:flex-row justify-between items-start py-8 gap-6">
         <Link
           href='/'

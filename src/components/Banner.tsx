@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export function Banner() {
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:justify-between py-32">
+    <div className="flex flex-col-reverse lg:flex-row items-center lg:justify-between py-32">
       <h1 className="text-center lg:text-left text-5xl text-gray-100 font-bold leading-snug">
         Hi 👋, <br />
         My name is <br />
