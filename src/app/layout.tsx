@@ -2,14 +2,15 @@
 import './globals.css'
 import { ReactNode } from 'react'
 
-import { DM_Sans } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 
 import { NavBar } from '@/components/NavBar'
+import { Footer } from '@/components/Footer'
 
-const dm_sans = DM_Sans({
+const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '700'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 })
 
 export const metadata = {
@@ -21,10 +22,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-br">
-      <body className={dm_sans.className}>
+      <body className={poppins.className}>
         <div className="container mx-auto px-4">
           <NavBar />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

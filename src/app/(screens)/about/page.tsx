@@ -3,7 +3,7 @@ import { WorkItem } from '@/components/WorkItem'
 import { Title } from '@/components/Title'
 import { Description } from '@/components/Description'
 
-import { works } from '../../config/works'
+import { works } from './data'
 
 export default function About() {
   return (
